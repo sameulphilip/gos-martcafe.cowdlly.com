@@ -1,0 +1,857 @@
+{
+  "categories": [
+    "classic COFFEE",
+    "ICED DRINKS",
+    "COFFEE FRAPPE",
+    "NON COFFEE FRAPPE",
+    "MOJITO",
+    "HOT DRINK",
+    "FRESH JUICE",
+    "SMOOTHIE",
+    "ICE TEA",
+    "MATCHA",
+    "SOFT DRINK",
+    "DESSERTS",
+    "EXTRA",
+    "FILTER COFFEE",
+    "SWEET WAFFLE",
+    "DEFFERENT WAFFLE",
+    "Croissant Corner",
+    "POTATO CORNER",
+    "markat"
+  ],
+  "items": [
+    {
+      "category": "classic COFFEE",
+      "name": "Turkish Coffee",
+      "price": 40,
+      "size": "S",
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Turkish Coffee",
+      "price": 50,
+      "size": "M",
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Espresso",
+      "price": 60,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Espresso Macchiato",
+      "price": 70,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Americano",
+      "price": 80,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Cortado",
+      "price": 75,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Flat White",
+      "price": 80,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Cappuccino",
+      "price": 85,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Cafe Latte",
+      "price": 90,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Caramel  Macchiato",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Salted carmel Latte",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Spanish Latte",
+      "price": 105,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Cafe Mocha",
+      "price": 105,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "White  Mocha",
+      "price": 105,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "classic COFFEE",
+      "name": "Hot Chocolate",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "ICED DRINKS",
+      "name": "Iced Caffe Americano",
+      "price": 80,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "ICED DRINKS",
+      "name": "Iced Caffe Latte",
+      "price": 90,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "ICED DRINKS",
+      "name": "Iced Caffe Mocha",
+      "price": 105,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "ICED DRINKS",
+      "name": "Iced White Mocha",
+      "price": 105,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "ICED DRINKS",
+      "name": "Iced Spanish Latte",
+      "price": 110,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "ICED DRINKS",
+      "name": "Iced Caramel  Macchiato",
+      "price": 110,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "ICED DRINKS",
+      "name": "Ice Chocolate",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "COFFEE FRAPPE",
+      "name": "Espresso Frappe",
+      "price": 95,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "COFFEE FRAPPE",
+      "name": "Spanish Latte  Frappe",
+      "price": 120,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "COFFEE FRAPPE",
+      "name": "Cookies Coffee Frappe",
+      "price": 110,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "COFFEE FRAPPE",
+      "name": "Vanilla Coffee Frappe",
+      "price": 110,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "COFFEE FRAPPE",
+      "name": "Caramel Frappe",
+      "price": 110,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "COFFEE FRAPPE",
+      "name": "Mocha Frappe",
+      "price": 110,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "NON COFFEE FRAPPE",
+      "name": "Caramel Classic Blended",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "NON COFFEE FRAPPE",
+      "name": "LOUTS CLASSIC BLANDED",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "NON COFFEE FRAPPE",
+      "name": "Vanilla Classic Blanded",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "NON COFFEE FRAPPE",
+      "name": "Chocolate Classic Blanded",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MOJITO",
+      "name": "PASSION FRUIT MOJITO",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MOJITO",
+      "name": "RED BULL MOJITO",
+      "price": 120,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MOJITO",
+      "name": "BLUEBERRY MOJITO",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MOJITO",
+      "name": "SNOWFALL MOJITO",
+      "price": 145,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MOJITO",
+      "name": "CLASSIC MOJITO",
+      "price": 90,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "HOT DRINK",
+      "name": "TEA",
+      "price": 35,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "HOT DRINK",
+      "name": "HOT SIDER",
+      "price": 50,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "HOT DRINK",
+      "name": "SAHLAB",
+      "price": 80,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "HOT DRINK",
+      "name": "HARBS",
+      "price": 40,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "HOT DRINK",
+      "name": "Hot Chocolate",
+      "price": 85,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "FRESH JUICE",
+      "name": "MANGO",
+      "price": 70,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "FRESH JUICE",
+      "name": "STRAWbERRY",
+      "price": 70,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "FRESH JUICE",
+      "name": "ORANGE",
+      "price": 50,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "FRESH JUICE",
+      "name": "KIWI",
+      "price": 80,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "FRESH JUICE",
+      "name": "LEMON MINT",
+      "price": 55,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SMOOTHIE",
+      "name": "MANGO",
+      "price": 90,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SMOOTHIE",
+      "name": "STRAWbERRY",
+      "price": 90,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SMOOTHIE",
+      "name": "BLUEBERRY",
+      "price": 95,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SMOOTHIE",
+      "name": "PINA COLADA",
+      "price": 105,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SMOOTHIE",
+      "name": "LEMON MINT",
+      "price": 75,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SMOOTHIE",
+      "name": "PASSION FRUIT",
+      "price": 80,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SMOOTHIE",
+      "name": "MANGOPASSION",
+      "price": 115,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "ICE TEA",
+      "name": "ICE TEA CLASSIC",
+      "price": 60,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "ICE TEA",
+      "name": "PASSIONFRUIT ICED TEA",
+      "price": 75,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "ICE TEA",
+      "name": "STRAWBERRY ICED TEA",
+      "price": 85,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MATCHA",
+      "name": "classic matcha (hot)",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MATCHA",
+      "name": "classic matcha (ice)",
+      "price": 105,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MATCHA",
+      "name": "matcha spanish latte(hot",
+      "price": 120,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MATCHA",
+      "name": "matcha spanish latte(ice)",
+      "price": 120,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MATCHA",
+      "name": "matcha white chocolate(hot",
+      "price": 115,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MATCHA",
+      "name": "matcha white chocolate(ice)",
+      "price": 115,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "MATCHA",
+      "name": "matcha iced strawberry",
+      "price": 120,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SOFT DRINK",
+      "name": "V COLA",
+      "price": 35,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SOFT DRINK",
+      "name": "RED BULL CLASSIC /WHITE",
+      "price": 75,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SOFT DRINK",
+      "name": "SMALL WATER",
+      "price": 20,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "DESSERTS",
+      "name": "CHEESE CAKE PLAIN",
+      "price": 80,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "DESSERTS",
+      "name": "BROWINE",
+      "price": 70,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "DESSERTS",
+      "name": "TIRAMISU",
+      "price": 125,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "DESSERTS",
+      "name": "MOLTEN CAKE",
+      "price": 135,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "DESSERTS",
+      "name": "MARBLE CAKE SLICE",
+      "price": 55,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SWEET WAFFLE",
+      "name": "WAFFLE PLAIN",
+      "price": 60,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SWEET WAFFLE",
+      "name": "NUTELLA WAFFLE",
+      "price": 75,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SWEET WAFFLE",
+      "name": "OREO WAFFLE",
+      "price": 80,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SWEET WAFFLE",
+      "name": "LOUTS  WAFFLE",
+      "price": 85,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SWEET WAFFLE",
+      "name": "PISTACHIO WAFFLE",
+      "price": 95,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "SWEET WAFFLE",
+      "name": "FOUR SEASONS WAFFLE",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "DEFFERENT WAFFLE",
+      "name": "TUNA WAFFLE",
+      "price": 110,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "DEFFERENT WAFFLE",
+      "name": "SMOKED TURKEY WAFFLE",
+      "price": 120,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "DEFFERENT WAFFLE",
+      "name": "potato Waffle",
+      "price": 100,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "Croissant Corner",
+      "name": "Plain Croissant",
+      "price": 50,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "Croissant Corner",
+      "name": "Cheese Croissant",
+      "price": 65,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "Croissant Corner",
+      "name": "Turkey Croissant",
+      "price": 85,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "Croissant Corner",
+      "name": "Choco Croissant",
+      "price": 60,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "POTATO CORNER",
+      "name": "CLASSIC POTATO DISH",
+      "price": 45,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "POTATO CORNER",
+      "name": "Cheddar Potato dish",
+      "price": 60,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "POTATO CORNER",
+      "name": "POTATO FRENCH BREAD",
+      "price": 70,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "POTATO CORNER",
+      "name": "POTATO SYRIAN BREAD",
+      "price": 65,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "soda",
+      "price": 22,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "redbull",
+      "price": 70,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "chipsy",
+      "price": 20,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "balance",
+      "price": 22,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "Gum",
+      "price": 25,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "cake",
+      "price": 18,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "oreo",
+      "price": 20,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "chipsy",
+      "price": 22,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "pop corn",
+      "price": 35,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "WATER",
+      "price": 12,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "TWIST",
+      "price": 22,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "MONSTER",
+      "price": 78,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "cake",
+      "price": 22,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "indomi",
+      "price": 23,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&h=600&q=80"
+    },
+    {
+      "category": "markat",
+      "name": "Choco",
+      "price": 30,
+      "size": null,
+      "description": null,
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&h=600&q=80"
+    }
+  ]
+}
