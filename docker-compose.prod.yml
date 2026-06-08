@@ -1,0 +1,51 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: gosmart-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: gosmart
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: gosmart
+    volumes:
+      - gosmart_pg:/var/lib/postgresql/data
+    networks:
+      - gosmart
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gosmart -d gosmart"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL}
+        NEXTAUTH_URL: ${NEXTAUTH_URL}
+    container_name: gosmart-app
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://gosmart:${DB_PASSWORD}@db:5432/gosmart?schema=public
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
+      NEXTAUTH_URL: ${NEXTAUTH_URL}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL}
+      NODE_ENV: production
+      RUN_DB_SETUP: ${RUN_DB_SETUP:-false}
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - gosmart_uploads:/app/public/uploads
+    networks:
+      - gosmart
+
+volumes:
+  gosmart_pg:
+  gosmart_uploads:
+
+networks:
+  gosmart:
