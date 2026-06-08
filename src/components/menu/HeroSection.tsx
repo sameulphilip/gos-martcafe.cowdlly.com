@@ -4,7 +4,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { BookOpen, Coffee, Gamepad2, Heart, MapPin, Sparkles } from "lucide-react";
 import { fadeUp, staggerContainer } from "@/lib/motion";
-import { MART_QUOTE, MART_STORY, MART_TAGLINE } from "@/lib/mart-intro";
+import {
+  MART_INTRO_LEAD,
+  MART_INTRO_PARAGRAPHS,
+  MART_INTRO_SUMMARY,
+  MART_INTRO_TITLE,
+  MART_QUOTE,
+  MART_VIBES,
+} from "@/lib/mart-intro";
 
 const vibes = [
   { icon: BookOpen, label: "مذاكرة" },
@@ -108,61 +115,69 @@ export function HeroSection() {
 
 export function IntroSection() {
   return (
-    <section className="px-4 py-10 md:px-6 md:py-14">
-      <div className="mx-auto max-w-2xl">
+    <section className="px-4 py-12 md:px-6 md:py-20">
+      <div className="mx-auto max-w-3xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center mb-6"
+          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="relative rounded-3xl border border-stone-200/80 bg-white overflow-hidden card-shadow"
         >
-          <span className="inline-block h-0.5 w-12 shimmer-line rounded-full mb-4" />
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-brand-blue">
-            أهلاً بيك في GO&apos;S MART
-          </h2>
-          <p className="mt-2 text-stone-500 text-sm">{MART_TAGLINE}</p>
-        </motion.div>
+          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-l from-brand-blue via-brand-gold to-brand-red" />
+          <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-brand-blue/5 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-16 -left-16 h-40 w-40 rounded-full bg-brand-gold/10 blur-3xl pointer-events-none" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-          className="relative rounded-2xl border border-stone-200/80 bg-white p-6 md:p-8 card-shadow overflow-hidden"
-        >
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-brand-blue via-brand-gold to-brand-red" />
+          <div className="relative p-7 md:p-10 text-center">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-brand-blue leading-tight">
+              {MART_INTRO_TITLE}
+            </h2>
 
-          <div className="space-y-5">
-            {MART_STORY.map((block, i) => (
-              <div
-                key={i}
-                className={`flex gap-4 items-start text-right ${
-                  i > 0 ? "pt-5 border-t border-stone-100" : ""
-                }`}
-              >
-                <span className="text-2xl shrink-0 leading-none mt-0.5">{block.emoji}</span>
-                <p className="text-sm md:text-base text-stone-700 leading-relaxed">
-                  {block.text}
+            <p className="mt-6 text-base md:text-lg text-stone-700 leading-relaxed font-medium max-w-2xl mx-auto">
+              {MART_INTRO_LEAD}
+            </p>
+
+            <div className="mt-8 space-y-6 text-right max-w-2xl mx-auto">
+              {MART_INTRO_PARAGRAPHS.map((para, i) => (
+                <p
+                  key={i}
+                  className="text-base md:text-lg text-stone-600 leading-loose whitespace-pre-line border-t border-stone-100 pt-6 first:border-0 first:pt-0"
+                >
+                  {para}
                 </p>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-2">
+              {MART_VIBES.map((vibe) => (
+                <span
+                  key={vibe}
+                  className="rounded-full bg-brand-blue/8 px-4 py-1.5 text-sm font-medium text-brand-blue ring-1 ring-brand-blue/10"
+                >
+                  {vibe}
+                </span>
+              ))}
+            </div>
+
+            <p className="mt-8 text-base md:text-lg font-semibold text-brand-blue leading-relaxed max-w-2xl mx-auto">
+              {MART_INTRO_SUMMARY}
+            </p>
           </div>
         </motion.div>
 
         <motion.blockquote
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 relative rounded-2xl bg-white p-6 md:p-8 card-shadow text-center overflow-hidden"
+          transition={{ duration: 0.55, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-8 relative rounded-3xl bg-gradient-to-br from-brand-blue to-brand-blue-light p-8 md:p-10 text-center overflow-hidden shadow-lg shadow-brand-blue/20"
         >
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-brand-blue via-brand-gold to-brand-red" />
-          <Heart className="mx-auto h-5 w-5 text-brand-red/70 mb-3 fill-brand-red/20" />
-          <p className="font-serif text-lg md:text-xl font-semibold text-brand-blue leading-relaxed">
+          <div className="absolute inset-0 grain-overlay opacity-30 pointer-events-none" />
+          <Heart className="relative mx-auto h-6 w-6 text-white/80 mb-4 fill-white/30" />
+          <p className="relative font-serif text-xl md:text-2xl font-semibold text-white leading-relaxed">
             {MART_QUOTE}
           </p>
-          <p className="mt-2 text-sm text-stone-400">— GO&apos;S MART</p>
+          <p className="relative mt-3 text-sm text-white/60">— GO&apos;S MART</p>
         </motion.blockquote>
       </div>
     </section>

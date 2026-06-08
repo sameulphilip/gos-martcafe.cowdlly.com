@@ -4,13 +4,21 @@ import { useCallback, useEffect, useState } from "react";
 import { Download, Printer, QrCode } from "lucide-react";
 import { getMenuPublicUrl } from "@/lib/menu-sync";
 import { generateQrWithLogo } from "@/lib/qr-generator";
-import { MART_QUOTE, MART_STORY, MART_SUBTITLE, MART_TAGLINE } from "@/lib/mart-intro";
+import {
+  MART_INTRO_LEAD,
+  MART_INTRO_PARAGRAPHS,
+  MART_INTRO_SUMMARY,
+  MART_INTRO_TITLE,
+  MART_QUOTE,
+  MART_SUBTITLE,
+} from "@/lib/mart-intro";
 
 function introHtml() {
-  return MART_STORY.map(
-    (b) =>
-      `<div class="story"><span class="emoji">${b.emoji}</span><p>${b.text}</p></div>`
-  ).join("");
+  return [
+    `<p class="lead">${MART_INTRO_LEAD}</p>`,
+    ...MART_INTRO_PARAGRAPHS.map((p) => `<p class="para">${p.replace(/\n/g, "<br/>")}</p>`),
+    `<p class="summary">${MART_INTRO_SUMMARY}</p>`,
+  ].join("");
 }
 
 function openPrintWindow(menuUrl: string, qrDataUrl: string) {
@@ -40,11 +48,10 @@ function openPrintWindow(menuUrl: string, qrDataUrl: string) {
       border-radius: 12px;
       background: #faf9f7;
     }
-    .intro h2 { color: #1a3278; font-size: 1rem; margin-bottom: 0.75rem; text-align: center; }
-    .story { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 0.65rem; }
-    .story:last-child { margin-bottom: 0; }
-    .emoji { font-size: 1.25rem; line-height: 1.2; flex-shrink: 0; }
-    .story p { font-size: 0.8rem; line-height: 1.55; color: #44403c; }
+    .intro h2 { color: #1a3278; font-size: 1.15rem; margin-bottom: 0.85rem; text-align: center; font-weight: 700; }
+    .lead { font-size: 0.85rem; line-height: 1.65; color: #44403c; font-weight: 600; margin-bottom: 0.65rem; }
+    .para { font-size: 0.8rem; line-height: 1.65; color: #57534e; margin-bottom: 0.55rem; }
+    .summary { font-size: 0.82rem; line-height: 1.6; color: #1a3278; font-weight: 600; margin-top: 0.5rem; }
     .quote {
       font-family: Georgia, serif;
       color: #1a3278;
@@ -64,10 +71,9 @@ function openPrintWindow(menuUrl: string, qrDataUrl: string) {
   <div class="card">
     <img class="qr" src="${qrDataUrl}" alt="QR Code" />
     <h1>GO'S MART</h1>
-    <p class="sub">${MART_SUBTITLE}</p>
-    <p class="tagline">${MART_TAGLINE}</p>
+    <p class="tagline">${MART_SUBTITLE}</p>
     <div class="intro">
-      <h2>أهلاً بيك في GO'S MART</h2>
+      <h2>${MART_INTRO_TITLE}</h2>
       ${introHtml()}
       <p class="quote">${MART_QUOTE}</p>
     </div>
@@ -108,7 +114,7 @@ export function MenuQrCard() {
     setDownloading(true);
     try {
       const w = 520;
-      const h = 920;
+      const h = 1100;
       const canvas = document.createElement("canvas");
       canvas.width = w;
       canvas.height = h;
@@ -134,30 +140,25 @@ export function MenuQrCard() {
       y += 32;
 
       ctx.fillStyle = "#57534e";
-      ctx.font = "13px sans-serif";
-      wrapText(ctx, MART_TAGLINE, w / 2, y, w - 48, 20);
-      y += 44;
-
-      ctx.fillStyle = "#1a3278";
-      ctx.font = "bold 14px sans-serif";
-      ctx.fillText("أهلاً بيك في GO'S MART", w / 2, y);
-      y += 28;
+      ctx.font = "12px sans-serif";
+      y += wrapText(ctx, MART_INTRO_LEAD, w / 2, y, w - 48, 18) + 16;
 
       ctx.textAlign = "right";
-      ctx.font = "12px sans-serif";
       ctx.fillStyle = "#44403c";
-      for (const block of MART_STORY) {
-        wrapText(ctx, `${block.emoji}  ${block.text}`, w - 32, y, w - 64, 18);
-        y += 52;
+      for (const para of MART_INTRO_PARAGRAPHS) {
+        y += wrapText(ctx, para.replace(/\n/g, " "), w - 32, y, w - 64, 18) + 12;
       }
 
       ctx.textAlign = "center";
       ctx.fillStyle = "#1a3278";
+      ctx.font = "600 12px sans-serif";
+      y += wrapText(ctx, MART_INTRO_SUMMARY, w / 2, y, w - 48, 18) + 16;
+
       ctx.font = "600 13px Georgia, serif";
-      wrapText(ctx, MART_QUOTE, w / 2, y + 8, w - 48, 18);
-      y += 56;
+      y += wrapText(ctx, MART_QUOTE, w / 2, y, w - 48, 18) + 24;
 
       ctx.font = "600 13px sans-serif";
+      ctx.fillStyle = "#1a3278";
       ctx.fillText("امسح للاطلاع على المنيو", w / 2, y);
       ctx.fillStyle = "#a8a29e";
       ctx.font = "11px monospace";
@@ -199,8 +200,8 @@ export function MenuQrCard() {
         )}
 
         <p className="font-serif font-bold text-brand-blue mt-4 text-lg">GO&apos;S MART</p>
-        <p className="font-arabic text-xs text-stone-500 mt-2 text-center leading-relaxed px-1">
-          {MART_TAGLINE}
+        <p className="font-arabic text-sm text-stone-600 mt-2 text-center leading-relaxed px-2">
+          {MART_INTRO_LEAD}
         </p>
         <p className="text-[11px] text-stone-400 mt-2 font-mono text-center break-all px-2">
           {menuUrl || "…"}
@@ -247,19 +248,25 @@ function wrapText(
   y: number,
   maxWidth: number,
   lineHeight: number
-) {
+): number {
   const words = text.split(" ");
   let line = "";
   let cy = y;
+  let lines = 0;
   for (const word of words) {
     const test = line ? `${line} ${word}` : word;
     if (ctx.measureText(test).width > maxWidth && line) {
       ctx.fillText(line, x, cy);
       line = word;
       cy += lineHeight;
+      lines++;
     } else {
       line = test;
     }
   }
-  if (line) ctx.fillText(line, x, cy);
+  if (line) {
+    ctx.fillText(line, x, cy);
+    lines++;
+  }
+  return lines * lineHeight;
 }
