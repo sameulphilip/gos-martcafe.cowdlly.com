@@ -10,6 +10,7 @@
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "db:seed": "tsx prisma/seed.ts",
+    "db:update-admin": "tsx prisma/update-admin.ts",
     "db:images": "tsx prisma/enrich-images.ts",
     "db:import": "python ../parse-gos-menu.py && tsx prisma/enrich-images.ts && tsx prisma/seed.ts",
     "db:setup": "prisma generate && prisma db push && tsx prisma/seed.ts",

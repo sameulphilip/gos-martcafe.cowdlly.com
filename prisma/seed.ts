@@ -31,9 +31,11 @@ async function main() {
   await prisma.category.deleteMany();
   await prisma.adminUser.deleteMany();
 
-  const passwordHash = await bcrypt.hash("admin123", 12);
+  const adminEmail = process.env.ADMIN_EMAIL?.trim().toLowerCase() || "admin@gosmart.com";
+  const adminPassword = process.env.ADMIN_PASSWORD || "admin123";
+  const passwordHash = await bcrypt.hash(adminPassword, 12);
   await prisma.adminUser.create({
-    data: { email: "admin@gosmart.com", passwordHash },
+    data: { email: adminEmail, passwordHash },
   });
 
   const categoryIds = new Map<string, string>();
@@ -73,7 +75,7 @@ async function main() {
 
   console.log("✅ Menu imported from Excel data");
   console.log(`📂 ${categoryIds.size} categories · ${menuData.items.length} items`);
-  console.log("📧 Admin: admin@gosmart.com / admin123");
+  console.log(`📧 Admin: ${adminEmail}`);
 }
 
 main()

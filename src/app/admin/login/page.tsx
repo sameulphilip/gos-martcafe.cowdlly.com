@@ -76,7 +76,7 @@ export default function AdminLoginPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full rounded-xl border border-stone-200 py-3 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue/40"
-                placeholder="admin@gosmart.com"
+                placeholder="your@email.com"
               />
             </div>
           </div>
