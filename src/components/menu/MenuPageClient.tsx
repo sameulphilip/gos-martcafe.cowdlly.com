@@ -26,7 +26,15 @@ export function MenuPageClient() {
   const [activeCategoryId, setActiveCategoryId] = useState<string | null>(null);
   const [selectedItem, setSelectedItem] = useState<ItemWithCategory | null>(null);
   const [search, setSearch] = useState("");
-  const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
+  const menuContentRef = useRef<HTMLDivElement>(null);
+
+  const scrollToMenu = useCallback(() => {
+    const el = menuContentRef.current;
+    if (!el) return;
+    const stickyOffset = window.innerWidth >= 1024 ? 112 : 72;
+    const top = el.getBoundingClientRect().top + window.scrollY - stickyOffset;
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  }, []);
 
   useEffect(() => {
     fetch("/api/menu", { cache: "no-store" })
@@ -51,17 +59,16 @@ export function MenuPageClient() {
     return result;
   }, [items, activeCategoryId, search]);
 
-  const handleCategorySelect = useCallback((id: string | null) => {
-    setActiveCategoryId(id);
-    setSearch("");
-    if (id) {
-      setTimeout(() => {
-        sectionRefs.current[id]?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 100);
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, []);
+  const handleCategorySelect = useCallback(
+    (id: string | null) => {
+      setActiveCategoryId(id);
+      setSearch("");
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => scrollToMenu());
+      });
+    },
+    [scrollToMenu]
+  );
 
   const showCategoryGrid = activeCategoryId === null && !search.trim();
   const contentKey = `${activeCategoryId ?? "all"}-${search.trim()}`;
@@ -89,7 +96,7 @@ export function MenuPageClient() {
             onSelect={handleCategorySelect}
           />
 
-          <div className="flex-1 min-w-0">
+          <div ref={menuContentRef} className="flex-1 min-w-0 scroll-mt-28">
             {loading ? (
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2 mt-4">
                 {Array.from({ length: 6 }).map((_, i) => (
@@ -129,7 +136,6 @@ export function MenuPageClient() {
                         return (
                           <section
                             key={cat.id}
-                            ref={(el) => { sectionRefs.current[cat.id] = el; }}
                             className="mt-14 scroll-mt-28"
                             id={`category-${cat.id}`}
                           >
