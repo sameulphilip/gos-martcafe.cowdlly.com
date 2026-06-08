@@ -10,7 +10,12 @@ if [ -z "$ADMIN_EMAIL" ] || [ -z "$ADMIN_PASSWORD" ]; then
   exit 1
 fi
 
-docker compose -f docker-compose.prod.yml exec \
+COMPOSE="docker compose -f docker-compose.prod.yml"
+
+# Script is on the host after git pull; the running image may not include it yet.
+$COMPOSE cp prisma/update-admin.ts app:/app/prisma/update-admin.ts
+
+$COMPOSE exec \
   -e ADMIN_EMAIL \
   -e ADMIN_PASSWORD \
   app npx tsx prisma/update-admin.ts
