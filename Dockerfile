@@ -31,9 +31,9 @@ COPY src/lib/item-images.ts ./src/lib/item-images.ts
 COPY deploy/vps/docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-RUN npm install prisma@6.9.0 tsx@4.19.4 --no-save
-
-RUN mkdir -p public/uploads && chown -R nextjs:nodejs public/uploads
+RUN npm install prisma@6.9.0 tsx@4.19.4 --no-save \
+  && mkdir -p public/uploads .next/cache \
+  && chown -R nextjs:nodejs /app
 
 USER nextjs
 EXPOSE 3000
