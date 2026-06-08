@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { BookOpen, Coffee, Gamepad2, Heart, MapPin, Sparkles } from "lucide-react";
 import { fadeUp, staggerContainer } from "@/lib/motion";
+import { MART_QUOTE, MART_STORY, MART_TAGLINE } from "@/lib/mart-intro";
 
 const vibes = [
   { icon: BookOpen, label: "مذاكرة" },
@@ -105,21 +106,6 @@ export function HeroSection() {
   );
 }
 
-const storyBlocks = [
-  {
-    emoji: "☕",
-    text: "إحنا هنا مش مجرد كافيه… إحنا المكان اللي معمول مخصوص عشان يظبط مزاج الطلاب",
-  },
-  {
-    emoji: "📚",
-    text: "جو هادي ومريح يساعدكم تركزوا وتذاكروا براحتكم، مع مشروبات وأكل بأعلى جودة",
-  },
-  {
-    emoji: "🎮",
-    text: "محتاج تفصل بعد يوم طويل؟ عندنا مساحة للعب والترفيه مع صحابك",
-  },
-];
-
 export function IntroSection() {
   return (
     <section className="px-4 py-10 md:px-6 md:py-14">
@@ -135,9 +121,7 @@ export function IntroSection() {
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-brand-blue">
             أهلاً بيك في GO&apos;S MART
           </h2>
-          <p className="mt-2 text-stone-500 text-sm">
-            كل حاجة في مكان واحد — مذاكرة، هدوء، قهوة، أكل، لعب، وراحة نفسية
-          </p>
+          <p className="mt-2 text-stone-500 text-sm">{MART_TAGLINE}</p>
         </motion.div>
 
         <motion.div
@@ -150,7 +134,7 @@ export function IntroSection() {
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-brand-blue via-brand-gold to-brand-red" />
 
           <div className="space-y-5">
-            {storyBlocks.map((block, i) => (
+            {MART_STORY.map((block, i) => (
               <div
                 key={i}
                 className={`flex gap-4 items-start text-right ${
@@ -176,7 +160,7 @@ export function IntroSection() {
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-l from-brand-blue via-brand-gold to-brand-red" />
           <Heart className="mx-auto h-5 w-5 text-brand-red/70 mb-3 fill-brand-red/20" />
           <p className="font-serif text-lg md:text-xl font-semibold text-brand-blue leading-relaxed">
-            بعد يومك الدراسي… تعالى اقعد، خد مشروبك، وفكّر انت عايز تعمل إيه
+            {MART_QUOTE}
           </p>
           <p className="mt-2 text-sm text-stone-400">— GO&apos;S MART</p>
         </motion.blockquote>
